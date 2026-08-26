@@ -79,17 +79,17 @@ if __name__ == "__main__":
     # ------------------------------------------------------------------
     # 4. Immutability Examples
     # ------------------------------------------------------------------
-    # mutable_list = [10, 20, 30, 40]
-    # mutable_list[0] = 50
-    # print(mutable_list)
+    mutable_list = [10, 20, 30, 40]
+    mutable_list[0] = 50
+    print(mutable_list)
 
-    # immutable_tuple = (10, 20, 30, 40)
-    # try:
-    #     immutable_tuple[0] = 50
-    # except TypeError as e:
-    #     print("Caught immutability error for tuple", e)
-    #     assert True
+    immutable_tuple = (10, 20, 30, 40)
+    try:
+        immutable_tuple[0] = 50
+    except TypeError as e:
+        print("Caught immutability error for tuple", e)
+        assert True
 
-    # new_tuple = (50,) + immutable_tuple[1:]
-    # assert new_tuple == (50, 20, 30, 40)
-    # print("Created new tuple", new_tuple)
+    new_tuple = (50,) + immutable_tuple[1:]
+    assert new_tuple == (50, 20, 30, 40)
+    print("Created new tuple", new_tuple)
